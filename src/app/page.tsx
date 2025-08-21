@@ -33,7 +33,7 @@ export default function Home() {
             <a href="#contact" className="btn-primary">Contact Me</a>
           </div>
         </div>
-        <div className="p-6 rounded-xl bg-[--color-card] border border-white/10 flex flex-col gap-6 items-center justify-center text-center">
+        <div className="p-6 panel flex flex-col gap-6 items-center justify-center text-center">
           <div className="size-24 md:size-28 grid place-items-center rounded-md bg-black/60 border border-white/10 text-[--color-accent] text-5xl font-bold">R</div>
           <div className="text-2xl tracking-wide">REJESHO</div>
           <div className="text-white/60">Modern Web Solutions</div>
@@ -64,7 +64,7 @@ export default function Home() {
               img: "/projects/dash.svg",
             },
           ].map((p) => (
-            <article key={p.key} className="rounded-xl bg-[--color-card] border border-white/10 p-4 flex flex-col gap-4">
+            <article key={p.key} className="panel p-4 flex flex-col gap-4">
               <div className="relative w-full aspect-[16/9] overflow-hidden rounded-lg border border-white/10">
                 <Image src={p.img} alt={p.title} fill className="object-cover" />
               </div>
@@ -90,13 +90,8 @@ export default function Home() {
         <div id="skills">
           <h3 className="text-3xl md:text-4xl font-semibold">Skills</h3>
           <div className="flex flex-wrap gap-3 mt-6">
-            {["HTML", "CSS", "JavaScript", "React", "Next.js", "Tailwind CSS"].map((skill) => (
-              <div
-                key={skill}
-                className="px-4 py-2 rounded-md bg-[--color-card] border border-white/10 text-white/80"
-              >
-                {skill}
-              </div>
+            {["HTM", "CSS", "JS", "R", "N", "~"].map((abbr, idx) => (
+              <div key={idx} className="skill-badge">{abbr}</div>
             ))}
           </div>
 
@@ -113,7 +108,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div id="contact">
+        <div id="contact" className="panel p-6">
           <h3 className="text-3xl md:text-4xl font-semibold">Contact</h3>
           <form className="mt-6 space-y-4" onSubmit={(e) => e.preventDefault()}>
             <input

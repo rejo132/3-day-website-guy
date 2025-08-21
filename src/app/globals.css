@@ -51,3 +51,12 @@ body {
 .btn-secondary {
   @apply inline-flex items-center justify-center h-10 px-4 rounded-md font-medium border border-white/10 hover:bg-white/5 transition;
 }
+
+/* Panels and badges matching the dark glass UI */
+.panel {
+  @apply rounded-xl bg-[--color-card] border border-white/10;
+}
+
+.skill-badge {
+  @apply size-12 grid place-items-center rounded-md bg-[--color-card] border border-white/10 text-white/80;
+}
