@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Rejesho — Web Developer",
   description: "I build modern and responsive web applications. View projects, skills and contact details.",
+  icons: {
+    icon: '/favicon.ico',
+  },
   openGraph: {
     title: "Rejesho — Web Developer",
     description: "Modern web solutions: projects, skills, and contact.",
