@@ -1,4 +1,6 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --background: #0b0f14;
@@ -8,14 +10,7 @@
   --accent: #0ee6d8;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-card: var(--card);
-  --color-accent: var(--accent);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -35,6 +30,17 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
   overflow-x: hidden;
+}
+
+/* Dark mode styles */
+.dark {
+  --background: #0b0f14;
+  --foreground: #e6f0f2;
+}
+
+.light {
+  --background: #f8fafc;
+  --foreground: #1e293b;
 }
 
 /* Custom scrollbar */
@@ -64,7 +70,13 @@ body {
 }
 
 .btn-primary {
-  @apply inline-flex items-center justify-center h-12 px-6 rounded-xl font-semibold bg-gradient-to-r from-[--color-accent] to-[--color-accent]/90 text-black hover:shadow-lg hover:shadow-[--color-accent]/25 transition-all duration-300 transform hover:-translate-y-0.5;
+  @apply inline-flex items-center justify-center h-12 px-6 rounded-xl font-semibold text-black transition-all duration-300 transform hover:-translate-y-0.5;
+  background: linear-gradient(to right, var(--accent), rgba(14, 230, 216, 0.9));
+  box-shadow: 0 0 20px rgba(14, 230, 216, 0.3);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 30px rgba(14, 230, 216, 0.5), 0 10px 25px rgba(14, 230, 216, 0.4);
 }
 
 .btn-secondary {
@@ -74,26 +86,70 @@ body {
 /* Enhanced Panels with glassmorphism */
 .panel {
   @apply rounded-2xl backdrop-blur-xl bg-white/5 border border-white/20 shadow-xl hover:shadow-2xl transition-all duration-300;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.panel:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
 }
 
 .skill-badge {
-  @apply size-14 grid place-items-center rounded-xl bg-white/5 border border-white/20 text-white/80 hover:text-[--color-accent] hover:border-[--color-accent]/30 transition-all duration-300 backdrop-blur-sm;
+  @apply size-14 grid place-items-center rounded-xl bg-white/5 border border-white/20 text-white/80 transition-all duration-300 backdrop-blur-sm;
 }
 
-/* Animation keyframes */
+.skill-badge:hover {
+  color: var(--accent);
+  border-color: rgba(14, 230, 216, 0.3);
+}
+
+/* Enhanced Animation keyframes */
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg); 
+  }
+  50% { 
+    transform: translateY(-10px) rotate(1deg); 
+  }
 }
 
 @keyframes glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(14, 230, 216, 0.3); }
-  50% { box-shadow: 0 0 40px rgba(14, 230, 216, 0.6); }
+  0%, 100% { 
+    box-shadow: 0 0 20px rgba(14, 230, 216, 0.3), 0 0 40px rgba(14, 230, 216, 0.1);
+    filter: brightness(1);
+  }
+  50% { 
+    box-shadow: 0 0 40px rgba(14, 230, 216, 0.6), 0 0 80px rgba(14, 230, 216, 0.2);
+    filter: brightness(1.1);
+  }
 }
 
 @keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.7; }
+  0%, 100% { 
+    opacity: 1; 
+    transform: scale(1);
+  }
+  50% { 
+    opacity: 0.8; 
+    transform: scale(1.05);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes breathe {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
 }
 
 /* Floating animation for elements */
@@ -107,6 +163,16 @@ body {
 
 .pulse {
   animation: pulse 2s ease-in-out infinite;
+}
+
+.shimmer {
+  background: linear-gradient(90deg, transparent, rgba(14, 230, 216, 0.2), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+.breathe {
+  animation: breathe 4s ease-in-out infinite;
 }
 
 /* Gradient text utilities */
@@ -140,7 +206,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Hover effects */
+/* Enhanced Hover effects */
 .hover-lift {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -186,4 +252,70 @@ body {
 @keyframes loading {
   0% { left: -100%; }
   100% { left: 100%; }
+}
+
+/* Enhanced button hover effects */
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(14, 230, 216, 0.4);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
+}
+
+/* Enhanced input focus effects */
+input:focus, textarea:focus {
+  box-shadow: 0 0 0 3px rgba(14, 230, 216, 0.2);
+  border-color: var(--accent);
+}
+
+/* Enhanced link hover effects */
+a:hover {
+  text-shadow: 0 0 10px rgba(14, 230, 216, 0.5);
+}
+
+/* Enhanced card hover effects */
+.panel:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Enhanced skill badge hover effects */
+.skill-badge:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(14, 230, 216, 0.3);
+}
+
+/* Enhanced navigation hover effects */
+nav a:hover {
+  text-shadow: 0 0 10px rgba(14, 230, 216, 0.5);
+}
+
+/* Enhanced profile image effects */
+.profile-image {
+  box-shadow: 0 0 30px rgba(14, 230, 216, 0.3);
+}
+
+.profile-image:hover {
+  box-shadow: 0 0 50px rgba(14, 230, 216, 0.5);
+}
+
+/* Enhanced project card effects */
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+}
+
+/* Enhanced form button effects */
+form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(14, 230, 216, 0.4);
+}
+
+/* Enhanced social link effects */
+.social-link:hover {
+  transform: translateX(5px);
+  text-shadow: 0 0 10px rgba(14, 230, 216, 0.5);
 }
