@@ -63,7 +63,7 @@ export default function Home() {
           {[...Array(20)].map((_, i) => (
             <div
               key={i}
-              className="absolute w-1 h-1 bg-[--color-accent] rounded-full animate-float opacity-60"
+                              className="absolute w-1 h-1 bg-accent rounded-full animate-float opacity-60"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
@@ -77,7 +77,7 @@ export default function Home() {
 
       {/* Enhanced Custom Cursor */}
       <div 
-        className="fixed w-8 h-8 rounded-full bg-gradient-to-r from-[--color-accent] to-purple-500 pointer-events-none z-50 transition-transform duration-100 ease-out mix-blend-difference animate-pulse"
+                    className="fixed w-8 h-8 rounded-full bg-gradient-to-r from-accent to-purple-500 pointer-events-none z-50 transition-transform duration-100 ease-out mix-blend-difference animate-pulse"
         style={{
           left: mousePosition.x - 16,
           top: mousePosition.y - 16,
@@ -89,27 +89,27 @@ export default function Home() {
       <header className="sticky top-0 z-20 backdrop-blur-xl bg-black/30 border-b border-white/20 shadow-2xl">
         <div className="container flex items-center justify-between py-4">
           <div className="flex items-center gap-3">
-            <div className="size-12 grid place-items-center rounded-xl bg-gradient-to-br from-[--color-accent] to-purple-500 border border-white/30 text-black text-xl font-bold shadow-2xl animate-glow">
+                          <div className="size-12 grid place-items-center rounded-xl bg-gradient-to-br from-accent to-purple-500 border border-white/30 text-black text-xl font-bold shadow-2xl animate-glow">
               R
             </div>
-            <span className="text-sm tracking-[0.25em] text-[--color-accent] font-semibold animate-pulse">REJESHO</span>
+                          <span className="text-sm tracking-[0.25em] text-accent font-semibold animate-pulse">REJESHO</span>
           </div>
           <nav className="hidden md:flex items-center gap-8 text-sm">
             <a href="#home" className="text-white/80 hover:text-white transition-colors duration-200 relative group">
               Home
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[--color-accent] to-purple-500 transition-all duration-200 group-hover:w-full"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-accent to-purple-500 transition-all duration-200 group-hover:w-full"></span>
             </a>
             <a href="#projects" className="text-white/80 hover:text-white transition-colors duration-200 relative group">
               Projects
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[--color-accent] to-purple-500 transition-all duration-200 group-hover:w-full"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-accent to-purple-500 transition-all duration-200 group-hover:w-full"></span>
             </a>
             <a href="#skills" className="text-white/80 hover:text-white transition-colors duration-200 relative group">
               Skills
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[--color-accent] to-purple-500 transition-all duration-200 group-hover:w-full"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-accent to-purple-500 transition-all duration-200 group-hover:w-full"></span>
             </a>
             <a href="#contact" className="text-white/80 hover:text-white transition-colors duration-200 relative group">
               Contact
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[--color-accent] to-purple-500 transition-all duration-200 group-hover:w-full"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-accent to-purple-500 transition-all duration-200 group-hover:w-full"></span>
             </a>
           </nav>
           <button 
@@ -126,10 +126,10 @@ export default function Home() {
       <section id="home" className="container grid md:grid-cols-2 gap-8 lg:gap-12 py-16 md:py-24">
         <div className="flex flex-col gap-6 md:gap-8 justify-center">
           <div className="space-y-4">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-white via-[--color-accent] to-purple-400 bg-clip-text text-transparent animate-pulse">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-futuristic bg-gradient-to-r from-white via-accent to-purple-400 bg-clip-text text-transparent animate-pulse">
               Hi, I&apos;m Rejesho
             </h1>
-            <h2 className="text-2xl md:text-3xl text-[--color-accent] font-semibold animate-glow">
+            <h2 className="text-2xl md:text-3xl text-accent font-futuristic-subtle animate-glow">
               Transforming ideas into sleek, functional web experiences
             </h2>
             <p className="text-white/80 max-w-[60ch] text-lg leading-relaxed">
@@ -143,7 +143,7 @@ export default function Home() {
               className="btn-primary group relative overflow-hidden animate-glow"
             >
               <span className="relative z-10">View Projects</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-[--color-accent] to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-accent to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </a>
             <a 
               href="#contact" 
@@ -166,7 +166,7 @@ export default function Home() {
             />
           </div>
           <div className="space-y-2">
-            <div className="text-2xl font-bold tracking-wide bg-gradient-to-r from-white to-[--color-accent] bg-clip-text text-transparent animate-pulse">
+            <div className="text-2xl font-futuristic tracking-wide bg-gradient-to-r from-white to-[accent] bg-clip-text text-transparent animate-pulse">
               REJESHO
             </div>
             <div className="text-white/70 font-medium">Modern Web Solutions</div>
@@ -177,7 +177,7 @@ export default function Home() {
       {/* Projects */}
       <section id="projects" className="container py-16 md:py-24">
         <div className="text-center mb-12">
-          <h3 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-[--color-accent] bg-clip-text text-transparent animate-pulse">
+          <h3 className="text-4xl md:text-5xl font-futuristic mb-4 bg-gradient-to-r from-white to-[accent] bg-clip-text text-transparent animate-pulse">
             Featured Projects
           </h3>
           <p className="text-white/70 text-lg max-w-2xl mx-auto">
@@ -229,7 +229,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               <div className="flex-1 space-y-4">
-                <h4 className="text-xl font-bold text-white group-hover:text-[--color-accent] transition-colors duration-300">
+                <h4 className="text-xl font-futuristic-display text-white group-hover:text-[accent] transition-colors duration-300">
                   {project.title}
                 </h4>
                 <p className="text-white/70 leading-relaxed">
@@ -239,7 +239,7 @@ export default function Home() {
                   {project.tech.map((tech, idx) => (
                     <span 
                       key={idx} 
-                      className="px-3 py-1 text-xs font-medium bg-[--color-accent]/20 text-[--color-accent] rounded-full border border-[--color-accent]/30 animate-glow"
+                      className="px-3 py-1 text-xs font-medium bg-[accent]/20 text-[accent] rounded-full border border-[accent]/30 animate-glow"
                     >
                       {tech}
                     </span>
@@ -250,7 +250,7 @@ export default function Home() {
                   <ul className="text-sm text-white/60 space-y-1">
                     {project.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center gap-2">
-                        <span className="w-1.5 h-1.5 bg-[--color-accent] rounded-full animate-pulse"></span>
+                        <span className="w-1.5 h-1.5 bg-[accent] rounded-full animate-pulse"></span>
                         {feature}
                       </li>
                     ))}
@@ -285,7 +285,7 @@ export default function Home() {
       <section className="container grid lg:grid-cols-2 gap-12 md:gap-16 py-16 md:py-24">
         <div id="skills" className="space-y-8">
           <div>
-            <h3 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-[--color-accent] bg-clip-text text-transparent animate-pulse">
+            <h3 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-[accent] bg-clip-text text-transparent animate-pulse">
               Skills & Expertise
             </h3>
             <p className="text-white/70 text-lg mb-8">
@@ -302,12 +302,12 @@ export default function Home() {
               ].map((skill) => (
                 <div key={skill.name} className="panel p-4 text-center backdrop-blur-xl bg-white/10 border border-white/30 hover:border-white/50 transition-all duration-300 group animate-float">
                   <div className="text-2xl mb-2 animate-pulse">{skill.icon}</div>
-                  <div className="font-semibold text-white group-hover:text-[--color-accent] transition-colors duration-300">
+                  <div className="font-semibold text-white group-hover:text-[accent] transition-colors duration-300">
                     {skill.name}
                   </div>
                   <div className="mt-2 w-full bg-white/10 rounded-full h-2">
                     <div 
-                      className="bg-gradient-to-r from-[--color-accent] to-purple-500 h-2 rounded-full transition-all duration-1000 ease-out animate-glow"
+                      className="bg-gradient-to-r from-[accent] to-purple-500 h-2 rounded-full transition-all duration-1000 ease-out animate-glow"
                       style={{ width: `${skill.level}%` }}
                     ></div>
                   </div>
@@ -322,7 +322,7 @@ export default function Home() {
               <li>
                 <a 
                   href="mailto:enochrejesho254@gmail.com" 
-                  className="flex items-center gap-3 hover:text-[--color-accent] transition-colors duration-200 group"
+                  className="flex items-center gap-3 hover:text-[accent] transition-colors duration-200 group"
                 >
                   <span className="text-xl animate-pulse">📧</span>
                   <span className="group-hover:translate-x-1 transition-transform duration-200">Email Me</span>
@@ -333,7 +333,7 @@ export default function Home() {
                   href="https://wa.me/254112098814" 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 hover:text-[--color-accent] transition-colors duration-200 group"
+                  className="flex items-center gap-3 hover:text-[accent] transition-colors duration-200 group"
                 >
                   <span className="text-xl animate-pulse">💬</span>
                   <span className="group-hover:translate-x-1 transition-transform duration-200">WhatsApp</span>
@@ -341,10 +341,10 @@ export default function Home() {
               </li>
               <li>
                 <a 
-                  href="https://linkedin.com/in/rejesho" 
+                  href="https://www.linkedin.com/in/enoch-rejesho-94a25b287" 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 hover:text-[--color-accent] transition-colors duration-200 group"
+                  className="flex items-center gap-3 hover:text-[accent] transition-colors duration-200 group"
                 >
                   <span className="text-xl animate-pulse">📱</span>
                   <span className="group-hover:translate-x-1 transition-transform duration-200">LinkedIn</span>
@@ -355,7 +355,7 @@ export default function Home() {
         </div>
 
         <div id="contact" className="panel p-8 backdrop-blur-xl bg-white/10 border border-white/30 shadow-xl animate-float">
-          <h3 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-[--color-accent] bg-clip-text text-transparent animate-pulse">
+          <h3 className="text-4xl md:text-5xl font-futuristic mb-6 bg-gradient-to-r from-white to-[accent] bg-clip-text text-transparent animate-pulse">
             Let&apos;s Connect
           </h3>
           <p className="text-white/70 text-lg mb-8">
@@ -365,7 +365,7 @@ export default function Home() {
             <div className="space-y-2">
               <label className="text-sm font-medium text-white/80">Your Name</label>
               <input
-                className="w-full h-12 rounded-xl bg-white/10 border border-white/30 px-4 text-white/90 placeholder:text-white/40 outline-none focus:ring-2 focus:ring-[--color-accent] focus:border-transparent transition-all duration-200 backdrop-blur-sm"
+                className="w-full h-12 rounded-xl bg-white/10 border border-white/30 px-4 text-white/90 placeholder:text-white/40 outline-none focus:ring-2 focus:ring-[accent] focus:border-transparent transition-all duration-200 backdrop-blur-sm"
                 placeholder="Enter your name"
                 type="text"
                 name="name"
@@ -377,7 +377,7 @@ export default function Home() {
             <div className="space-y-2">
               <label className="text-sm font-medium text-white/80">Your Email</label>
               <input
-                className="w-full h-12 rounded-xl bg-white/10 border border-white/30 px-4 text-white/90 placeholder:text-white/40 outline-none focus:ring-2 focus:ring-[--color-accent] focus:border-transparent transition-all duration-200 backdrop-blur-sm"
+                className="w-full h-12 rounded-xl bg-white/10 border border-white/30 px-4 text-white/90 placeholder:text-white/40 outline-none focus:ring-2 focus:ring-[accent] focus:border-transparent transition-all duration-200 backdrop-blur-sm"
                 placeholder="Enter your email"
                 type="email"
                 name="email"
@@ -389,7 +389,7 @@ export default function Home() {
             <div className="space-y-2">
               <label className="text-sm font-medium text-white/80">Your Message</label>
               <textarea
-                className="w-full min-h-[140px] rounded-xl bg-white/10 border border-white/30 p-4 text-white/90 placeholder:text-white/40 outline-none focus:ring-2 focus:ring-[--color-accent] focus:border-transparent transition-all duration-200 backdrop-blur-sm resize-none"
+                className="w-full min-h-[140px] rounded-xl bg-white/10 border border-white/30 p-4 text-white/90 placeholder:text-white/40 outline-none focus:ring-2 focus:ring-[accent] focus:border-transparent transition-all duration-200 backdrop-blur-sm resize-none"
                 placeholder="Tell me about your project..."
                 name="message"
                 value={formData.message}
@@ -405,7 +405,7 @@ export default function Home() {
               <span className="relative z-10">
                 {isSubmitting ? 'Sending...' : 'Send Message'}
               </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-[--color-accent] to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-[accent] to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </button>
           </form>
         </div>

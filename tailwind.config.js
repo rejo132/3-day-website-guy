@@ -17,6 +17,9 @@ module.exports = {
       fontFamily: {
         sans: ['var(--font-geist-sans)', 'Arial', 'Helvetica', 'sans-serif'],
         mono: ['var(--font-geist-mono)', 'monospace'],
+        orbitron: ['var(--font-orbitron)', 'monospace'],
+        exo2: ['var(--font-exo2)', 'sans-serif'],
+        rajdhani: ['var(--font-rajdhani)', 'sans-serif'],
       },
     },
   },
