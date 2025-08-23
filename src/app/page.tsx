@@ -134,7 +134,7 @@ export default function Home() {
       </header>
 
       {/* Hero */}
-      <section id="home" className="container grid md:grid-cols-2 gap-8 lg:gap-12 py-16 md:py-24">
+      <section id="home" className="container grid md:grid-cols-2 gap-8 lg:gap-16 py-20 md:py-32">
         <div className="flex flex-col gap-6 md:gap-8 justify-center">
           <div className="space-y-4">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-futuristic bg-gradient-to-r from-white via-accent to-purple-400 bg-clip-text text-transparent animate-pulse">
@@ -165,22 +165,22 @@ export default function Home() {
             </a>
           </div>
         </div>
-        <div className="panel p-8 flex flex-col gap-6 items-center justify-center text-center backdrop-blur-xl bg-white/10 border border-white/30 shadow-2xl animate-float">
-          <div className="relative size-32 md:size-36 overflow-hidden rounded-2xl border-4 border-white/30 shadow-2xl animate-glow">
+        <div className="panel p-8 flex flex-col gap-8 items-center justify-center text-center backdrop-blur-xl bg-white/10 border border-white/30 shadow-2xl animate-float">
+          <div className="relative size-48 md:size-56 lg:size-64 overflow-hidden rounded-3xl border-4 border-white/30 shadow-2xl animate-glow">
             <Image 
               src="/profile/rejesho-profile.jpg" 
               alt="Rejesho Profile" 
               fill 
               className="object-cover"
               priority
-              sizes="(max-width: 768px) 128px, 144px"
+              sizes="(max-width: 768px) 192px, (max-width: 1024px) 224px, 256px"
             />
           </div>
-          <div className="space-y-2">
-            <div className="text-2xl font-futuristic tracking-wide bg-gradient-to-r from-white to-[accent] bg-clip-text text-transparent animate-pulse">
+          <div className="space-y-3">
+            <div className="text-3xl md:text-4xl lg:text-5xl font-futuristic tracking-wide bg-gradient-to-r from-white to-[accent] bg-clip-text text-transparent animate-pulse">
               REJESHO
             </div>
-            <div className="text-white/70 font-medium">Modern Web Solutions</div>
+            <div className="text-white/70 font-medium text-lg">Modern Web Solutions</div>
           </div>
         </div>
       </section>
