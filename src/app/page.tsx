@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
+
 export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -51,6 +52,7 @@ export default function Home() {
 
   return (
     <div className={`min-h-screen font-sans relative overflow-x-hidden transition-colors duration-500 ${isDarkMode ? 'dark' : 'light'}`}>
+
       {/* Enhanced Animated Background */}
       <div className="fixed inset-0 -z-10">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900/30 to-slate-900"></div>
@@ -60,18 +62,27 @@ export default function Home() {
         
         {/* Floating particles */}
         <div className="absolute inset-0 overflow-hidden">
-          {[...Array(20)].map((_, i) => (
-            <div
-              key={i}
-                              className="absolute w-1 h-1 bg-accent rounded-full animate-float opacity-60"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 3}s`,
-                animationDuration: `${3 + Math.random() * 4}s`
-              }}
-            />
-          ))}
+          {[...Array(20)].map((_, i) => {
+            // Use a consistent seed based on index to avoid hydration mismatch
+            const seed = i * 0.1;
+            const left = ((Math.sin(seed * 100) + 1) * 50) % 100;
+            const top = ((Math.cos(seed * 150) + 1) * 50) % 100;
+            const delay = (seed * 3) % 3;
+            const duration = 3 + (seed * 4) % 4;
+            
+            return (
+              <div
+                key={i}
+                className="absolute w-1 h-1 bg-accent rounded-full animate-float opacity-60"
+                style={{
+                  left: `${left}%`,
+                  top: `${top}%`,
+                  animationDelay: `${delay}s`,
+                  animationDuration: `${duration}s`
+                }}
+              />
+            );
+          })}
         </div>
       </div>
 
